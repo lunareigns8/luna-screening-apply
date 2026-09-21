@@ -1,24 +1,21 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Apply to Serve Luna</title>
+  <title>Apply to Serve Luna</title>
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- Luna branding only — no link back to another page -->
 <nav>
   <div class="wrap navin">
     <span class="brand">Luna ♡</span>
   </div>
 </nav>
-
 
 <div class="formShell">
 
@@ -27,259 +24,10 @@
     <h3>Wallet Screening</h3>
 
     <div class="stepnav">
-
-      <button data-goto="1" class="active">1. About You</button>
-      <button data-goto="2">2. Your Experience</button>
-      <button data-goto="3">3. Limits</button>
-      <button data-goto="4">4. Your Wallet</button>
-      <button data-goto="5">5. Your Dynamic</button>
-      <button data-goto="6">6. Prove You're Serious</button>
-      <button data-goto="7">7. Final Agreement</button>
-
-    </div>
-
-    <div class="script" style="font-size:28px">
-      Honesty gets you further with me ♡
-    </div>
-
-  </aside>
-
-
-  <main class="formArea">
-
-    <div class="progress">
-      <div id="progressBar"></div>
-    </div>
-
-
-    <form id="screeningForm">
-
-
-      <!-- STEP 1 -->
-
-      <section class="step active" data-step="1">
-
-        <div class="kicker">Step 1 of 7 • About You</div>
-
-        <h2>Let's get to know you ♡</h2>
-
-        <div class="notice">
-          You must be 18 or older to apply. Selecting “No” to age-verification will end the application.
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            What should Luna call you? *
-          </label>
-
-          <input
-            name="name"
-            type="text"
-            required
-            placeholder="Nickname or alias is fine">
-
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            What is your X @username? *
-          </label>
-
-          <input
-            name="xhandle"
-            type="text"
-            required
-            placeholder="@yourusername">
-
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            Confirm your age range *
-          </label>
-
-          <select name="age" required>
-
-            <option value="">Select one…</option>
-            <option>18–20</option>
-            <option>21–24</option>
-            <option>25–34</option>
-            <option>35–44</option>
-            <option>45–54</option>
-            <option>55+</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            Are you willing to complete third-party 18+ age verification? *
-          </label>
-
-          <div class="options">
-
-            <label class="option">
-              <input
-                type="radio"
-                name="av"
-                value="Yes"
-                required>
-              Yes
-            </label>
-
-            <label class="option">
-              <input
-                type="radio"
-                name="av"
-                value="No">
-              No
-            </label>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- STEP 2 -->
-
-      <section class="step" data-step="2">
-
-        <div class="kicker">
-          Step 2 of 7 • Your Experience
-        </div>
-
-        <h2>What are you into?</h2>
-
-
-        <div class="q">
-
-          <label class="title">
-            How experienced are you with Findom/Femdom?
-          </label>
-
-          <select name="experience">
-
-            <option>Completely new</option>
-            <option>Curious / limited experience</option>
-            <option>Some experience</option>
-            <option>Experienced submissive</option>
-            <option>Currently or previously served a Domme</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            What interests you? (choose any)
-          </label>
-
-          <div class="options">
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Financial domination">
-              Financial domination
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Bratty domination">
-              Bratty domination
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Paying bills">
-              Paying bills
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Gifts / spoiling">
-              Gifts / spoiling
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Tasks">
-              Tasks
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Teasing">
-              Teasing
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Praise / approval">
-              Praise / approval
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Controlled financial play">
-              Controlled financial play
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Obedience">
-              Obedience
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Long-term D/s dynamic">
-              Long-term D/s dynamic
-            </label>
-
-            <label class="option">
-              <input type="checkbox" name="interests" value="Casual tribute / admiration">
-              Casual tribute / admiration
-            </label>
-
-          </div>
-
-        </div>
-
-
-        <div class="q">
-
-          <label class="title">
-            What are you actually looking for from Luna?
-          </label>
-
-          <textarea name="lookingfor"></textarea>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- STEP 3 -->
-
-      <section class="step" data-step="3">
-
-        <div class="kicker">
-          Step 3 of 7 • Limits
-        </div>
-
-        <h2>Your boundaries matter.</h2>
-
-
-        <div class="q">
-
-          <label class="title">
-            Hard limits
-          </label>
-
-          <textarea
-            name="hard
+      <button type="button" data-goto="1" class="active">1. About You</button>
+      <button type="button" data-goto="2">2. Your Experience</button>
+      <button type="button" data-goto="3">3. Limits</button>
+      <button type="button" data-goto="4">4. Your Wallet</button>
+      <button type="button" data-goto="5">5. Your Dynamic</button>
+      <button type="button" data-goto="6">6. Prove You're Serious</button>
+      <button type="button" data-goto="7">7
