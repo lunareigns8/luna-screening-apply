@@ -1,918 +1,658 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Apply to Serve Luna</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
 <body>
 
-  <nav>
-    <div class="wrap navin">
-      <span class="brand">Luna ♡</span>
+<nav>
+  <div class="wrap navin">
+    <span class="brand">Luna ♡</span>
+  </div>
+</nav>
+
+<div class="formShell">
+
+  <aside class="steps">
+    <h3>Wallet Screening</h3>
+
+    <div class="stepnav">
+      <button type="button" data-goto="1" class="active">1. About You</button>
+      <button type="button" data-goto="2">2. Your Experience</button>
+      <button type="button" data-goto="3">3. Limits</button>
+      <button type="button" data-goto="4">4. Your Wallet</button>
+      <button type="button" data-goto="5">5. Your Dynamic</button>
+      <button type="button" data-goto="6">6. Prove You're Serious</button>
+      <button type="button" data-goto="7">7. Final Agreement</button>
     </div>
-  </nav>
+
+    <div class="script" style="font-size:28px">
+      Honesty gets you further with me ♡
+    </div>
+  </aside>
 
 
-  <div class="formShell">
+  <main class="formArea">
 
-    <!-- SIDE / TOP STEP NAVIGATION -->
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
 
-    <aside class="steps">
+    <form id="screeningForm">
 
-      <h3>Wallet Screening</h3>
+      <!-- STEP 1 -->
+      <section class="step active" data-step="1">
 
-      <div class="stepnav">
+        <div class="kicker">Step 1 of 7 • About You</div>
 
-        <button type="button" data-goto="1" class="active">
-          1. About You
-        </button>
+        <h2>Let's get to know you ♡</h2>
 
-        <button type="button" data-goto="2">
-          2. Your Experience
-        </button>
+        <div class="notice">
+          You must be 18 or older to apply.
+          Selecting “No” to age verification will end the application.
+        </div>
 
-        <button type="button" data-goto="3">
-          3. Limits
-        </button>
+        <div class="q">
+          <label class="title">
+            What should Luna call you? *
+          </label>
 
-        <button type="button" data-goto="4">
-          4. Your Wallet
-        </button>
+          <input
+            name="name"
+            type="text"
+            required
+            placeholder="Nickname or alias is fine">
+        </div>
 
-        <button type="button" data-goto="5">
-          5. Your Dynamic
-        </button>
+        <div class="q">
+          <label class="title">
+            What is your X @username? *
+          </label>
 
-        <button type="button" data-goto="6">
-          6. Prove You're Serious
-        </button>
+          <input
+            name="xhandle"
+            type="text"
+            required
+            placeholder="@yourusername">
+        </div>
 
-        <button type="button" data-goto="7">
-          7. Final Agreement
-        </button>
+        <div class="q">
+          <label class="title">
+            Confirm your age range *
+          </label>
 
-      </div>
+          <select name="age" required>
+            <option value="">Select one…</option>
+            <option>18–20</option>
+            <option>21–24</option>
+            <option>25–34</option>
+            <option>35–44</option>
+            <option>45–54</option>
+            <option>55+</option>
+          </select>
+        </div>
 
-      <div class="script" style="font-size:28px">
-        Honesty gets you further with me ♡
-      </div>
+        <div class="q">
+          <label class="title">
+            Are you willing to complete third-party 18+ age verification? *
+          </label>
 
-    </aside>
-
-
-
-    <!-- FORM AREA -->
-
-    <main class="formArea">
-
-      <div class="progress">
-        <div id="progressBar"></div>
-      </div>
-
-
-      <form id="screeningForm">
-
-
-        <!-- ================================= -->
-        <!-- STEP 1 -->
-        <!-- ================================= -->
-
-        <section class="step active" data-step="1">
-
-          <div class="kicker">
-            Step 1 of 7 • About You
-          </div>
-
-          <h2>Let's get to know you ♡</h2>
-
-
-          <div class="notice">
-            You must be 18 or older to apply.
-            Selecting “No” to age-verification will end the application.
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              What should Luna call you? *
+          <div class="options">
+            <label class="option">
+              <input
+                type="radio"
+                name="av"
+                value="Yes"
+                required>
+              Yes
             </label>
-
-            <input
-              name="name"
-              type="text"
-              required
-              placeholder="Nickname or alias is fine">
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              What is your X @username? *
-            </label>
-
-            <input
-              name="xhandle"
-              type="text"
-              required
-              placeholder="@yourusername">
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Confirm your age range *
-            </label>
-
-            <select name="age" required>
-
-              <option value="">Select one…</option>
-
-              <option>18–20</option>
-              <option>21–24</option>
-              <option>25–34</option>
-              <option>35–44</option>
-              <option>45–54</option>
-              <option>55+</option>
-
-            </select>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Are you willing to complete third-party 18+ age verification? *
-            </label>
-
-
-            <div class="options">
-
-              <label class="option">
-
-                <input
-                  type="radio"
-                  name="av"
-                  value="Yes"
-                  required>
-
-                Yes
-
-              </label>
-
-
-              <label class="option">
-
-                <input
-                  type="radio"
-                  name="av"
-                  value="No">
-
-                No
-
-              </label>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 2 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="2">
-
-          <div class="kicker">
-            Step 2 of 7 • Your Experience
-          </div>
-
-          <h2>What are you into?</h2>
-
-
-          <div class="q">
-
-            <label class="title">
-              How experienced are you with Findom/Femdom?
-            </label>
-
-            <select name="experience">
-
-              <option>Completely new</option>
-
-              <option>
-                Curious / limited experience
-              </option>
-
-              <option>
-                Some experience
-              </option>
-
-              <option>
-                Experienced submissive
-              </option>
-
-              <option>
-                Currently or previously served a Domme
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              What interests you? (choose any)
-            </label>
-
-
-            <div class="options">
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Financial domination">
-                Financial domination
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Bratty domination">
-                Bratty domination
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Paying bills">
-                Paying bills
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Gifts / spoiling">
-                Gifts / spoiling
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Tasks">
-                Tasks
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Teasing">
-                Teasing
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Praise / approval">
-                Praise / approval
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Controlled financial play">
-                Controlled financial play
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Obedience">
-                Obedience
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Long-term D/s dynamic">
-                Long-term D/s dynamic
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="interests"
-                  value="Casual tribute / admiration">
-                Casual tribute / admiration
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              What are you actually looking for from Luna?
-            </label>
-
-            <textarea name="lookingfor"></textarea>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 3 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="3">
-
-          <div class="kicker">
-            Step 3 of 7 • Limits
-          </div>
-
-          <h2>Your boundaries matter.</h2>
-
-
-          <div class="q">
-
-            <label class="title">
-              Hard limits
-            </label>
-
-            <textarea
-              name="hardlimits"
-              placeholder="Things Luna must never incorporate into your dynamic"></textarea>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Soft limits
-            </label>
-
-            <textarea
-              name="softlimits"
-              placeholder="Things you may consider only after discussion and explicit agreement"></textarea>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Preferred safeword
-            </label>
-
-            <input
-              name="safeword"
-              type="text"
-              placeholder="Default: RED">
-
-          </div>
-
-
-          <div class="q">
 
             <label class="option">
-
               <input
-                type="checkbox"
-                name="withdrawConsent"
-                required>
-
-              I understand I may withdraw consent or stop an interaction at any time.
-
+                type="radio"
+                name="av"
+                value="No">
+              No
             </label>
-
           </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 4 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="4">
-
-          <div class="kicker">
-            Step 4 of 7 • Your Wallet
-          </div>
-
-          <h2>Be honest about your budget.</h2>
-
-
-          <div class="notice">
-            Financial play uses discretionary funds only.
-            Essential living expenses are off-limits.
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Comfortable MONTHLY discretionary Findom budget
-            </label>
-
-            <select name="monthlyBudget">
-
-              <option>Under $50</option>
-              <option>$50–$100</option>
-              <option>$101–$250</option>
-              <option>$251–$500</option>
-              <option>$501–$1,000</option>
-              <option>$1,000+</option>
-
-            </select>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Comfortable amount in ONE interaction
-            </label>
-
-            <select name="singleBudget">
-
-              <option>$10–$25</option>
-              <option>$26–$50</option>
-              <option>$51–$100</option>
-              <option>$101–$250</option>
-              <option>$251–$500</option>
-              <option>Other</option>
-
-            </select>
-
-          </div>
-
-
-          <div class="notice">
-            Your stated limit is a ceiling, not a target.
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 5 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="5">
-
-          <div class="kicker">
-            Step 5 of 7 • Your Dynamic
-          </div>
-
-          <h2>How do you like to interact?</h2>
-
-
-          <div class="q">
-
-            <label class="title">
-              How often would you ideally interact?
-            </label>
-
-            <select name="frequency">
-
-              <option>Occasionally</option>
-              <option>A few times per month</option>
-              <option>Weekly</option>
-              <option>Several times per week</option>
-              <option>Ongoing dynamic</option>
-              <option>Not sure yet</option>
-
-            </select>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Which style appeals most?
-            </label>
-
-            <select name="style">
-
-              <option>Playful / bratty</option>
-              <option>Firm and structured</option>
-              <option>Praise / reward focused</option>
-              <option>Financially focused</option>
-              <option>A mixture</option>
-              <option>I'd rather discover it naturally</option>
-
-            </select>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              Communication preferences
-            </label>
-
-
-            <div class="options">
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Teasing">
-                Teasing
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Direct instructions">
-                Direct instructions
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Tasks">
-                Tasks
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Praise when earned">
-                Praise when earned
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Bratty demands">
-                Bratty demands
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Casual conversation too">
-                Casual conversation too
-              </label>
-
-
-              <label class="option">
-                <input
-                  type="checkbox"
-                  name="communication"
-                  value="Structured rules">
-                Structured rules
-              </label>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 6 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="6">
-
-          <div class="kicker">
-            Step 6 of 7 • Prove You're Serious
-          </div>
-
-          <h2>Show me you were paying attention.</h2>
-
-
-          <div class="q">
-
-            <label class="title">
-              What makes you useful to Luna? 💋
-            </label>
-
-            <textarea
-              name="useful"
-              required></textarea>
-
-          </div>
-
-
-          <div class="q">
-
-            <label class="title">
-              What's one boundary you expect Luna to respect?
-            </label>
-
-            <textarea
-              name="respectBoundary"
-              required></textarea>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- STEP 7 -->
-        <!-- ================================= -->
-
-        <section class="step" data-step="7">
-
-          <div class="kicker">
-            Step 7 of 7 • Final Agreement
-          </div>
-
-          <h2>Rules & consent.</h2>
-
+        </div>
+
+        <div class="formActions">
+          <span></span>
+
+          <button
+            type="button"
+            class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 2 -->
+      <section class="step" data-step="2">
+
+        <div class="kicker">
+          Step 2 of 7 • Your Experience
+        </div>
+
+        <h2>What are you into?</h2>
+
+        <div class="q">
+          <label class="title">
+            How experienced are you with Findom/Femdom?
+          </label>
+
+          <select name="experience">
+            <option>Completely new</option>
+            <option>Curious / limited experience</option>
+            <option>Some experience</option>
+            <option>Experienced submissive</option>
+            <option>Currently or previously served a Domme</option>
+          </select>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            What interests you? (choose any)
+          </label>
 
           <div class="options">
 
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeAge"
-                value="Yes"
-                required>
-
-              I confirm that I am 18 or older.
-
+              <input type="checkbox" name="interests" value="Financial domination">
+              Financial domination
             </label>
 
-
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeAV"
-                value="Yes"
-                required>
-
-              I understand that third-party age verification may be required.
-
+              <input type="checkbox" name="interests" value="Bratty domination">
+              Bratty domination
             </label>
 
-
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeConsent"
-                value="Yes"
-                required>
-
-              I understand that Findom is consensual fantasy / financial play.
-
+              <input type="checkbox" name="interests" value="Paying bills">
+              Paying bills
             </label>
 
-
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeFunds"
-                value="Yes"
-                required>
-
-              I will only use discretionary funds.
-              Essential living expenses are off-limits.
-
+              <input type="checkbox" name="interests" value="Gifts / spoiling">
+              Gifts / spoiling
             </label>
 
-
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeLimits"
-                value="Yes"
-                required>
-
-              I understand my stated financial limits will be respected.
-
+              <input type="checkbox" name="interests" value="Tasks">
+              Tasks
             </label>
 
-
             <label class="option">
-
-              <input
-                type="checkbox"
-                name="agreeTribute"
-                value="Yes"
-                required>
-
-              I understand tribute does not purchase consent,
-              affection, sexual interaction, or a relationship.
-
+              <input type="checkbox" name="interests" value="Teasing">
+              Teasing
             </label>
 
+            <label class="option">
+              <input type="checkbox" name="interests" value="Praise / approval">
+              Praise / approval
+            </label>
 
             <label class="option">
+              <input type="checkbox" name="interests" value="Controlled financial play">
+              Controlled financial play
+            </label>
 
-              <input
-                type="checkbox"
-                name="agreeEnd"
-                value="Yes"
-                required>
+            <label class="option">
+              <input type="checkbox" name="interests" value="Obedience">
+              Obedience
+            </label>
 
-              I understand that either person can end the dynamic.
+            <label class="option">
+              <input type="checkbox" name="interests" value="Long-term D/s dynamic">
+              Long-term D/s dynamic
+            </label>
 
+            <label class="option">
+              <input type="checkbox" name="interests" value="Casual tribute / admiration">
+              Casual tribute / admiration
             </label>
 
           </div>
+        </div>
 
+        <div class="q">
+          <label class="title">
+            What are you actually looking for from Luna?
+          </label>
 
-          <div class="notice" style="margin-top:22px">
+          <textarea name="lookingfor"></textarea>
+        </div>
 
-            <strong>After approval:</strong>
-            you will be directed to third-party age verification.
-            The $50 initial tribute comes only after that approval.
-
-          </div>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- FORM CONTROLS -->
-        <!-- ================================= -->
-
-        <div
-          class="formActions"
-          style="
-            display:flex;
-            visibility:visible;
-            opacity:1;
-            width:100%;
-            align-items:center;
-            justify-content:space-between;
-            gap:12px;
-            margin-top:32px;
-            padding:10px 0 32px;
-            position:relative;
-            z-index:100;
-          ">
-
-
-          <button
-            type="button"
-            class="btn ghost"
-            id="backBtn">
-
+        <div class="formActions">
+          <button type="button" class="btn ghost backStep">
             ← Back
-
           </button>
 
+          <button type="button" class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 3 -->
+      <section class="step" data-step="3">
+
+        <div class="kicker">
+          Step 3 of 7 • Limits
+        </div>
+
+        <h2>Your boundaries matter.</h2>
+
+        <div class="q">
+          <label class="title">
+            Hard limits
+          </label>
+
+          <textarea
+            name="hardlimits"
+            placeholder="Things Luna must never incorporate into your dynamic"></textarea>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Soft limits
+          </label>
+
+          <textarea
+            name="softlimits"
+            placeholder="Things you may consider only after discussion and explicit agreement"></textarea>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Preferred safeword
+          </label>
+
+          <input
+            name="safeword"
+            type="text"
+            placeholder="Default: RED">
+        </div>
+
+        <div class="q">
+          <label class="option">
+            <input
+              type="checkbox"
+              name="withdrawConsent"
+              required>
+
+            I understand I may withdraw consent or stop an interaction at any time.
+          </label>
+        </div>
+
+        <div class="formActions">
+          <button type="button" class="btn ghost backStep">
+            ← Back
+          </button>
+
+          <button type="button" class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 4 -->
+      <section class="step" data-step="4">
+
+        <div class="kicker">
+          Step 4 of 7 • Your Wallet
+        </div>
+
+        <h2>Be honest about your budget.</h2>
+
+        <div class="notice">
+          Financial play uses discretionary funds only.
+          Essential living expenses are off-limits.
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Comfortable MONTHLY discretionary Findom budget
+          </label>
+
+          <select name="monthlyBudget">
+            <option>Under $50</option>
+            <option>$50–$100</option>
+            <option>$101–$250</option>
+            <option>$251–$500</option>
+            <option>$501–$1,000</option>
+            <option>$1,000+</option>
+          </select>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Comfortable amount in ONE interaction
+          </label>
+
+          <select name="singleBudget">
+            <option>$10–$25</option>
+            <option>$26–$50</option>
+            <option>$51–$100</option>
+            <option>$101–$250</option>
+            <option>$251–$500</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="notice">
+          Your stated limit is a ceiling, not a target.
+        </div>
+
+        <div class="formActions">
+          <button type="button" class="btn ghost backStep">
+            ← Back
+          </button>
+
+          <button type="button" class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 5 -->
+      <section class="step" data-step="5">
+
+        <div class="kicker">
+          Step 5 of 7 • Your Dynamic
+        </div>
+
+        <h2>How do you like to interact?</h2>
+
+        <div class="q">
+          <label class="title">
+            How often would you ideally interact?
+          </label>
+
+          <select name="frequency">
+            <option>Occasionally</option>
+            <option>A few times per month</option>
+            <option>Weekly</option>
+            <option>Several times per week</option>
+            <option>Ongoing dynamic</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Which style appeals most?
+          </label>
+
+          <select name="style">
+            <option>Playful / bratty</option>
+            <option>Firm and structured</option>
+            <option>Praise / reward focused</option>
+            <option>Financially focused</option>
+            <option>A mixture</option>
+            <option>I'd rather discover it naturally</option>
+          </select>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            Communication preferences
+          </label>
+
+          <div class="options">
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Teasing">
+              Teasing
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Direct instructions">
+              Direct instructions
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Tasks">
+              Tasks
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Praise when earned">
+              Praise when earned
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Bratty demands">
+              Bratty demands
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Casual conversation too">
+              Casual conversation too
+            </label>
+
+            <label class="option">
+              <input type="checkbox" name="communication" value="Structured rules">
+              Structured rules
+            </label>
+
+          </div>
+        </div>
+
+        <div class="formActions">
+          <button type="button" class="btn ghost backStep">
+            ← Back
+          </button>
+
+          <button type="button" class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 6 -->
+      <section class="step" data-step="6">
+
+        <div class="kicker">
+          Step 6 of 7 • Prove You're Serious
+        </div>
+
+        <h2>Show me you were paying attention.</h2>
+
+        <div class="q">
+          <label class="title">
+            What makes you useful to Luna? 💋
+          </label>
+
+          <textarea
+            name="useful"
+            required></textarea>
+        </div>
+
+        <div class="q">
+          <label class="title">
+            What's one boundary you expect Luna to respect?
+          </label>
+
+          <textarea
+            name="respectBoundary"
+            required></textarea>
+        </div>
+
+        <div class="formActions">
+          <button type="button" class="btn ghost backStep">
+            ← Back
+          </button>
+
+          <button type="button" class="btn primary nextStep">
+            Next →
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- STEP 7 -->
+      <section class="step" data-step="7">
+
+        <div class="kicker">
+          Step 7 of 7 • Final Agreement
+        </div>
+
+        <h2>Rules & consent.</h2>
+
+        <div class="options">
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeAge"
+              value="Yes"
+              required>
+
+            I confirm that I am 18 or older.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeAV"
+              value="Yes"
+              required>
+
+            I understand that third-party age verification may be required.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeConsent"
+              value="Yes"
+              required>
+
+            I understand that Findom is consensual fantasy / financial play.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeFunds"
+              value="Yes"
+              required>
+
+            I will only use discretionary funds. Essential living expenses are off-limits.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeLimits"
+              value="Yes"
+              required>
+
+            I understand my stated financial limits will be respected.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeTribute"
+              value="Yes"
+              required>
+
+            I understand tribute does not purchase consent, affection,
+            sexual interaction, or a relationship.
+          </label>
+
+          <label class="option">
+            <input
+              type="checkbox"
+              name="agreeEnd"
+              value="Yes"
+              required>
+
+            I understand that either person can end the dynamic.
+          </label>
+
+        </div>
+
+        <div class="notice" style="margin-top:22px">
+          <strong>After approval:</strong>
+          you will receive further instructions.
+        </div>
+
+        <div class="formActions">
 
           <button
             type="button"
-            class="btn primary"
-            id="nextBtn"
-            style="
-              display:inline-flex;
-              visibility:visible;
-              opacity:1;
-              margin-left:auto;
-              min-height:52px;
-              padding:14px 26px;
-            ">
-
-            Next →
-
+            class="btn ghost backStep">
+            ← Back
           </button>
-
 
           <button
             type="submit"
             class="btn primary"
-            id="submitBtn"
-            style="
-              display:none;
-              margin-left:auto;
-              min-height:52px;
-              padding:14px 26px;
-            ">
-
+            id="submitBtn">
             SUBMIT TO LUNA 💋
-
           </button>
 
         </div>
 
+      </section>
 
-      </form>
-
-
-
-      <!-- ================================= -->
-      <!-- SUCCESS -->
-      <!-- ================================= -->
-
-      <div
-        class="success"
-        id="success">
-
-        <h2>
-          APPLICATION RECEIVED ♡
-        </h2>
+    </form>
 
 
-        <p>
-          Cute. You can follow instructions.
-        </p>
+    <!-- SUCCESS -->
+
+    <div class="success" id="success">
+
+      <h2>APPLICATION RECEIVED ♡</h2>
+
+      <p>
+        Cute. You can follow instructions.
+      </p>
+
+      <p>
+        You will receive further instructions once approved.
+      </p>
+
+      <p>
+        <strong>
+          Don't send twice. Don't chase. Behave. 💋
+        </strong>
+      </p>
+
+      <p class="small">
+        Your application has been sent for review.
+        Do not submit it twice.
+      </p>
+
+    </div>
+
+  </main>
+
+</div>
 
 
-        <p>
-          You will receive further instructions once approved.
-        </p>
-
-
-        <p>
-
-          <strong>
-            Don't send twice. Don't chase. Behave. 💋
-          </strong>
-
-        </p>
-
-
-        <p class="small">
-          Your application has been sent for review.
-          Do not submit it twice.
-        </p>
-
-      </div>
-
-
-    </main>
-
-  </div>
-
-
-  <script src="app.js?v=8"></script>
+<script src="app.js?v=10"></script>
 
 </body>
 </html>
